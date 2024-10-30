@@ -1,4 +1,3 @@
-
 /*
  * File:        Indian Summer
  * Author:      Yanis Ahmed
