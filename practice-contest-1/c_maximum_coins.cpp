@@ -1,40 +1,29 @@
-#include<bits/stdc++.h>
-#include <ios>  // Include for std::ios
+#include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
-    // Fast I/O setup
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
 
-    vector<int>v = {2, 4, 8, 16, 32, 64, 128, 256, 512, 1024};
-    vector<int>v2 = {2, 6, 14, 30, 62, 126, 254, 510, 1022, 2046};
+	while(t--)
+	{
+	    int odd = 0;
+	int even = 0;
+	    int n;
+	    cin>>n;
+	    for(int i=1; i<=n; i++)
+	    {
+	        if(n % i == 0)
+	        {
+	            if(i % 2 == 0) even++;
+	            else odd++;
+	        }
+	    }
 
-    int t;
-    cin >> t;
-    while(t--)
-    {
-        int n, x;
-        cin >> n >> x;
-
-        int left = n - x;
-        if (left < 0)
-        {
-            cout << v[n-1] << endl;
-        }
-        else if (n == x)
-        {
-            cout << v2[n-1] << endl;
-        }
-        else
-        {
-            if (left == 0)
-                cout << v[n-1] << endl;
-            else
-                cout << v[n-1] - v2[left-1] << endl;
-        }
-    }
-    return 0;
+	    if(even > odd) cout<<"1"<<endl;
+	    else if (even == odd) cout<<"0"<<endl;
+	    else cout<<"-1"<<endl;
+	}
+return 0;
 }
