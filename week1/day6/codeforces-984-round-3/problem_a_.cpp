@@ -1,4 +1,3 @@
-
 /*
  * File:        Problem a Quintomania
  * Author:      Yanis Ahmed
