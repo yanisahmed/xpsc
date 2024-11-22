@@ -8,28 +8,7 @@ int main()
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    //map<int, int>mp;
-    map<vector<int>, int>mp;
-
-    vector<int>a;
-    a.push_back(2);
-    a.push_back(2);
-    a.push_back(2);
-    a.push_back(2);
-    a.push_back(2);
-
-    mp[a] = 5;
-    for(auto[x,y] : mp)
-    {
-        vector<int> v = x;
-        for(auto value : v)
-        {
-            cout<<value<< " ";
-        }
-        cout<< '\n';
-    }
-
-    }
+   cout<<"Hello World!"<<endl;
 
     return 0;
 }
