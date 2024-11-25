@@ -13,24 +13,29 @@ int main() {
 
 
     vector<long long> v(n);
+    long long res = 0;
     for (int i = 0; i < n; i++) {
         cin >> v[i];
+        res += v[i];
     }
 
-
-    sort(v.begin(), v.end(), greater<long long>());
-
-    long long ans = 0;
-    for(int i = 0; i<n-1; i++)
+    if(res % 2 == 0)
     {
-        ans = v[i] * v[i+1];
+        cout<<res<<endl;
+        return 0;
+    }
+
+    sort(v.begin(), v.end());
+    for(int i=0; i<n;i++)
+    {
+        long long ans = res - v[i];
         if(ans % 2 == 0)
         {
             cout<<ans<<endl;
             return 0;
         }
     }
-    cout<<ans<<endl;
+
 
     return 0;
 }
