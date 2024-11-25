@@ -25,7 +25,7 @@ int main() {
         }
     }
     if(flag) cout<<found<<endl;
-    else cout<<"none"<<endl;
+    else cout<<"None"<<endl;
    return 0;
 }
 
