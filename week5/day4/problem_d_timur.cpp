@@ -22,34 +22,30 @@ int main()
     {
         int n;
         cin>>n;
+        map<char, int>mp;
         string s;
-        int flag = 0;
-        int caps = 0;
-        int len = s.length();
-        if(len == 5)
+        cin>>s;
+
+        for(char ch: s)
         {
-            for(int i=0; i<len; i++)
+            mp[ch]++;
+        }
+        int flag = 0;
+
+        for(const auto& pairs: mp)
+        {
+            if(pairs.first == 'T' && pairs.second == 1 || pairs.first == 'i' && pairs.second == 1 || pairs.first == 'r' && pairs.second == 1 || pairs.first == 'u' && pairs.second == 1 || pairs.first == 'm' && pairs.second == 1)
             {
-                if(s[i] == 'T' || s[i]=='m' || s[i]=='i' || s[i]=='u' || s[i] == 'r')
-                {
-                    if(s[i] >= 'A' && s[i]<= 'Z') caps ++;
-                    if(s[i] == 'T')
-                    {
-                        flag = 1;
-                    }
-                }
-                else
-                {
-                    break;
-                }
+                flag = 1;
+            }
+            else
+            {
+                flag = 0;
+                break;
             }
         }
-        else
-        {
-            cout<<"NO"<<endl;
-        }
 
-        if(flag && caps == 1) cout<<"YES"<<endl;
+        if(flag && n==5) cout<<"Yes"<<endl;
         else cout<<"NO"<<endl;
     }
 
