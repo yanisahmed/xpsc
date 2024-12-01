@@ -18,7 +18,6 @@ void solve() {
         sort(a.begin(), a.end());
 
         if (n == 3) {
-
             cout << 0 << endl;
             continue;
         }
@@ -37,3 +36,4 @@ int main() {
     solve();
     return 0;
 }
+
