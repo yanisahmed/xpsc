@@ -20,6 +20,7 @@ int main()
                 int breadth = 2 * j;
 
                 int total = width + breadth;
+                if(total > n) break;
                 ans = i * j;
 
             }
