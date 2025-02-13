@@ -10,30 +10,29 @@ int main() {
         int n;
         cin>>n;
         vector<int>a(n);
-        vector<int>dup;
+        unordered_map<int, int>mp;
         for(int i=0; i<n; i++)
         {
             cin>>a[i];
+            mp[a[i]]++;
         }
-        sort(a.begin(), a.end());
+        //sort(a.begin(), a.end());
 
 
-        for(int i=0; i<n-1; i++)
-        {
-          if(a[i] == a[i+1])
-          {
-              dup.push_back(a[i]);
-          }
+       int ans = -1;
+        for(int i=0; i<n; i++){
+            if(mp[a[i]]>1){
+                ans = a[i];
+                break;
+            }
         }
-
-        if(dup.size()>=1)
-        {
-            cout<<dup.size()<<endl;
-            for(auto val: dup)
-                cout<<val<<" ";
-            cout<<endl;
+        if(ans==-1){
+            cout << -1 << endl;
         }
-        else cout<<-1<<endl;
+        else{
+            cout << 1 << endl;
+            cout << ans << endl;
+        }
     }
 	return 0;
 
