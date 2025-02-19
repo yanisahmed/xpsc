@@ -12,12 +12,14 @@ int main() {
        int n;
        string s;
        cin>>n>>s;
-       if(s[0]=='z' || s[n-1]=='z')
+       sort(s.begin(),s.end());
+       if(s[0]=='z' && s[n-1]=='z')
        {
            cout<<-1<<endl;
           continue;
        }
+
        for(int i = 0;i<n;i++)cout<<'z';
        cout<<endl;
-    }
+    }
 }
